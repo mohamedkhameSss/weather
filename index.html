@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- /// <reference path="../typings/globals/jquery/index.d.ts" />
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand p-2 text-primary" href="#">WEATHER
+            </a>
+
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-cloud   "></i>
+            </button>
+            <div class="collapse navbar-collapse bg-spec " id="navbarNav">
+                <ul class="navbar-nav p-3 ">
+                    <li class="nav-item ">
+                        <button type="button" class="btn btn-outline-primary rounded-pill active m-2">Home</button>
+
+
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-primary rounded-pill m-2">News</button>
+
+
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-primary rounded-pill m-2">Live Camera</button>
+
+
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-primary rounded-pill m-2">Photos</button>
+
+
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-outline-primary rounded-pill m-2">Contacts</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="container">
+            <div class="input-group p-5 m-3  ">
+                <!-- <button class="btn btn-outline-light  " type="button" id="button-addon2">Search</button> -->
+                <input type="text" class="form-control  " placeholder="Enter"
+                    aria-label="Example text with button addon" id="Enter" aria-describedby="button-addon2">
+            </div>
+            <div class="card-group  d-flex p-5 m-5 ">
+                <div class="card   m-2  ">
+                    <div class="card-header  d-flex justify-content-between  ">
+                        <p id="currenrday">Tuesday</p>
+                        <p id="dateMain">25 October</p>
+                    </div>
+                    <div class="card-body  ">
+                        <div class="card-text d-flex align-items-center">
+                            <div>
+                                <h5 class="card-title fs-1" id="countryName">Cairo</h5>
+                                <h1><span id="degreeMain"> 26</span> </h1>
+                            </div>
+                            <div class="firstI">
+                                <div id="iconMain"></div>
+                            </div>
+                        </div>
+                        <h6 id="condition">Light rain</h6>
+                        <div>
+                            <div class="d-flex justify-content-between mt-5 ">
+                                <div><i id="humi" class="fa-solid fa-umbrella">
+                                        20</i><span>%</span></div>
+                                <i class="fa-solid fa-wind"><span id="windMain">18</span> KM/H</i><i
+                                    class="fa-regular fa-compass"><span id="dirMain">East</span></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card bg-transparent  m-2 cardx  ">
+                    <div class="card-header  text-center">
+                        <p id="day1" class="nextDay">Tuesday</p>
+                    </div>
+                    <div class="card-body blue1 ">
+                        <div class="row align-items-center text-center">
+                            <div id="iconNext1" class="iconNext m-auto p-3 "></div>
+                            <h4 class="col-12 nextDegree" id="avgtemp_c">30.2oC</h4>
+                            <p class="col-12 "><small class="nextMinDe" id="mintemp_c">19.2o</small></p>
+                            <p id="conditionNext1" class="col-12"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card  bg-transparent  m-2 cardx x">
+                    <div class="card-header text-center">
+                        <p id="daylast" class="nextDay">Tuesday</p>
+                    </div>
+                    <div class="card-body  blue1">
+                        <div class="row align-items-center text-center">
+                            <i id="iconNext2" class=" m-auto p-3 iconNext"></i>
+                            <h4 id="avgtemp_c2" class="col-12 nextDegree">30.2oC</h4>
+                            <p class="col-12"><small class="nextMinDe" id="mintemp_c2">19.2o</small></p>
+                            <p id="conditionNext2" class="col-12"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="  w-100 ">
+        <div class="container ">
+            <div class="row align-items-center ">
+                <div class=" my-3 d-flex  w-25   col-12 justify-content-end ">
+                    <span><i class="fa-brands fa-facebook "></i></span>
+                    <span><i class="fa-brands fa-instagram "></i></span>
+                    <span><i class="fa-brands fa-twitter "></i></span>
+                    <span><i class="fa-brands fa-linkedin"></i></span>
+                </div>
+                <div class="input-group m-auto col-12">
+                    <button class="btn btn-outline-light " type="button" id="button-addon1">Subscribe</button>
+                    <input type="text" class="form-control  " placeholder=" Enter your Email to Subscribe"
+                        aria-label="Example text with button addon" aria-describedby="button-addon1">
+                </div>
+                <p class="my-4 col-12">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
